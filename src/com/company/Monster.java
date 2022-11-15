@@ -55,5 +55,10 @@ public class Monster {
             throw new Exception("Non sei un bravo medico, mi dispiace");
         }
     }
+
+    public int getPuntiFerita() {
+        return puntiFerita;
+    }
+
     //git push origin main
 }
