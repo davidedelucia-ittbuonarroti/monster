@@ -19,7 +19,10 @@ public class Monster {
     public void subisci(int danniSubiti){
         puntiFerita -= danniSubiti;
     }
-    
+
     //toString
+    public String toString(){
+        return nome +" -> " +puntiFerita +"HP   " + danno +"Attack Damage";
+    }
     //git push origin main
 }
