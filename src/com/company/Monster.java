@@ -41,7 +41,7 @@ public class Monster {
     //ancora vivo??
     public boolean vivo(){
         boolean var = true;
-        if(puntiFerita != 0){
+        if(puntiFerita == 0){
             var = false;
         }
         return var;
