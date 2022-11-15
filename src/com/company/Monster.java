@@ -11,7 +11,7 @@ public class Monster {
         Random r = new Random();
         this.nome = nome;
         this.puntiFerita = puntiFerita;
-        this.danno = r.nextInt(puntiFerita);
+        this.danno = r.nextInt(puntiFerita/2);
     }
     //metodo attacco
     public void attacca(Monster m){
