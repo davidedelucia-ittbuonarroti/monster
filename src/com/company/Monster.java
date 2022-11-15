@@ -14,7 +14,9 @@ public class Monster {
         this.danno = r.nextInt(puntiFerita);
     }
     //metodo attacco
-
+    public void attacca(Monster m){
+        m.subisci(danno);
+    }
     //metodo subisci
     public void subisci(int danniSubiti){
         puntiFerita -= danniSubiti;
