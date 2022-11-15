@@ -11,7 +11,7 @@ public class Main {
         int i = 1;
         Monster Goffredo = new Monster("Goffredo",r.nextInt(40));
         Monster Manuele = new Monster ("Manuele", r.nextInt(40));
-        while(Goffredo.vivo() || Manuele.vivo()){
+        while(Goffredo.vivo() && Manuele.vivo()){
             if(i%2 == 0){
                 try {
                     Goffredo.attacca(Manuele);
