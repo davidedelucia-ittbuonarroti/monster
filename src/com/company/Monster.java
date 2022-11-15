@@ -14,7 +14,12 @@ public class Monster {
         this.danno = r.nextInt(puntiFerita);
     }
     //metodo attacco
+
     //metodo subisci
+    public void subisci(int danniSubiti){
+        puntiFerita -= danniSubiti;
+    }
+    
     //toString
     //git push origin main
 }
