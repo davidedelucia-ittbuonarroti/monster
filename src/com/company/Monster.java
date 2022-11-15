@@ -14,17 +14,37 @@ public class Monster {
         this.danno = r.nextInt(puntiFerita/2);
     }
     //metodo attacco
-    public void attacca(Monster m){
-        m.subisci(danno);
+    public void attacca(Monster m) throws Exception{
+        try{
+            m.subisci(danno);
+        } catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+
     }
     //metodo subisci
-    public void subisci(int danniSubiti){
-        puntiFerita -= danniSubiti;
+    public void subisci(int danniSubiti) throws Exception{
+        if(vivo()){
+            puntiFerita -= danniSubiti;
+        } else {
+            throw new Exception("Ha già sofferto abastanza!");
+        }
+
+
     }
 
     //toString
     public String toString(){
         return nome +" -> " +puntiFerita +"HP   " + danno +"Attack Damage";
+    }
+
+    //ancora vivo??
+    public boolean vivo(){
+        boolean var = true;
+        if(puntiFerita != 0){
+            var = false;
+        }
+        return var;
     }
     //git push origin main
 }
