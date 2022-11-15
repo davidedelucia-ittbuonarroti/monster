@@ -46,5 +46,14 @@ public class Monster {
         }
         return var;
     }
+
+    //curami
+    public void cura(int quantità) throws Exception{
+        if(quantità >0 && quantità < puntiFerita){
+            puntiFerita += quantità;
+        } else {
+            throw new Exception("Non sei un bravo medico, mi dispiace");
+        }
+    }
     //git push origin main
 }

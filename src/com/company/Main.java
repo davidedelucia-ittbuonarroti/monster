@@ -8,7 +8,7 @@ public class Main {
 	    // write your code here
         Scanner input = new Scanner(System.in);
         String nome;
-        int hp;
+        int hp, i = 0;
         System.out.println("Inserisci il nome del primo mostro: ");
         nome = input.nextLine();
         System.out.println("Inserisci i punti vita massimi del primo mostro: ");
@@ -20,8 +20,10 @@ public class Main {
         hp = input.nextInt();
         Monster m2 = new Monster(nome, hp);
 
-        while(m1.vivo || m2.vivo){
-
+        while(m1.vivo() || m2.vivo()){
+            if(i%2 == 0){
+                m1.attacca(m2);
+            }
         }
     }
 }
