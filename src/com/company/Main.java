@@ -9,8 +9,8 @@ public class Main {
 	    // write your code here
         Random r = new Random();
         int i = 1;
-        Monster Goffredo = new Monster("Goffredo",r.nextInt(40));
-        Monster Manuele = new Monster ("Manuele", r.nextInt(40));
+        Monster Goffredo = new Monster("Goffredo",40);
+        Monster Manuele = new Monster ("Manuele", 40);
         while(Goffredo.vivo() && Manuele.vivo()){
             if(i%2 == 0){
                 try {
@@ -25,10 +25,12 @@ public class Main {
                     System.out.println(e.getMessage());
                 }
             }
+            System.out.println("\n\n");
             System.out.println(Manuele.toString());
             System.out.println(Goffredo.toString());
             i++;
         }
+        System.out.println("\n\n");
         System.out.println(Manuele.toString());
         System.out.println(Goffredo.toString());
         /*
