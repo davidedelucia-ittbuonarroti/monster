@@ -7,6 +7,31 @@ public class Main {
 
     public static void main(String[] args) {
 	    // write your code here
+        Random r = new Random();
+        int i = 1;
+        Monster Goffredo = new Monster("Goffredo",r.nextInt(40));
+        Monster Manuele = new Monster ("Manuele", r.nextInt(40));
+        while(Goffredo.vivo() || Manuele.vivo()){
+            if(i%2 == 0){
+                try {
+                    Goffredo.attacca(Manuele);
+                } catch (Exception e){
+                    System.out.println(e.getMessage());
+                }
+            } else {
+                try {
+                    Manuele.attacca(Goffredo);
+                } catch (Exception e){
+                    System.out.println(e.getMessage());
+                }
+            }
+            System.out.println(Manuele.toString());
+            System.out.println(Goffredo.toString());
+            i++;
+        }
+        System.out.println(Manuele.toString());
+        System.out.println(Goffredo.toString());
+        /*
         Scanner input = new Scanner(System.in);
         Random r = new Random();
         String nome;
@@ -29,7 +54,7 @@ public class Main {
                 System.out.println(menu());
                 do{
                     scelta = input.nextInt();
-                } while(scelta <0 || scelta>2);
+                } while(scelta <1 || scelta>2);
                 switch(scelta) {
                     case 1:
                         try {
@@ -71,13 +96,17 @@ public class Main {
         System.out.println("\n\n");
         System.out.println(m1.toString());
         System.out.println(m2.toString());
+         */
 
 
     }
+    /*
     public static  String menu(){
         String str =
-                "1) Cura il mostro" +
+                "1) Cura il mostro" + "\n"+
                 "2) Attacca il mostro avversario";
         return str;
     }
+
+     */
 }
