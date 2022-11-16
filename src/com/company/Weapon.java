@@ -8,5 +8,9 @@ public class Weapon {
         arma = danni;
         equipped = false;
     }
-    
+
+    //raccogli
+    public void raccogli(){
+        equipped = true;
+    }
 }
