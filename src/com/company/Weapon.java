@@ -13,4 +13,14 @@ public class Weapon {
     public void raccogli(){
         equipped = true;
     }
+
+    //lascia
+    public void lascia(){
+        equipped = false;
+    }
+
+    //getEquipped
+    public boolean isEquipped(){
+        return equipped;
+    }
 }
